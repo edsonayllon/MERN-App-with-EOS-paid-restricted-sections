@@ -6,6 +6,7 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const config = require('./config');
+const userService = require('./services/user.service');
 
 // auth routes
 const checkTokenRouter = require('./routes/auth/checkToken.route');
@@ -64,11 +65,18 @@ require('./middleware/passport.middleware')(passport);
 
 // Routes with middleware
 
-// screens
+// api
 app.use('/', indexRouter);
 app.use('/api/home', homeRouter);
 app.use('/api/secret',
   passport.authenticate('jwt', { session : false }),
+  secretRouter
+);
+app.use('/api/restricted',
+  passport.authenticate('jwt', { session : false }, async (err, payload) => {
+    // req._id = payload._id;
+    // userService.checkRestricted
+  }),
   secretRouter
 );
 

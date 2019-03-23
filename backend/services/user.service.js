@@ -128,3 +128,7 @@ module.exports.verifyEmailAddress = async (token, email) => {
     };
   }
 };
+
+module.exports.checkPremium = async (req, res, next) => {
+  
+}

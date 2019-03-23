@@ -5,6 +5,7 @@ const argon2 = require('argon2');
 // their account will be deleted by default
 const UserSchema = new mongoose.Schema({
   username: { type: String, required: false, unique: true },
+  restrictedAccess: { type: Boolean, default: false },
   local: {
     email: { type: String, required: false, unique: true },
     password: { type: String, required: false },

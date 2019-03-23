@@ -9,7 +9,6 @@ const JWTstrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
 
 module.exports = (passport) => {
-
   passport.use('local-register', new LocalStrategy({
     usernameField : 'email',
     passwordField : 'password'
