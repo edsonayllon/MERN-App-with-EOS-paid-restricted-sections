@@ -6,7 +6,8 @@ import {
 import { Router, Link, Route } from './';
 import {
   Home,
-  Secret,
+  Protected,
+  Restricted,
   Login,
   Register,
   ForgotPassword,
@@ -27,7 +28,7 @@ export default class MainRouter extends Component {
       },
       {
         path: '/secret',
-        component: withAuth(Secret),
+        component: withAuth(Protected),
         title: 'Secret'
       },
       {
@@ -59,6 +60,11 @@ export default class MainRouter extends Component {
         path: '/u/settings',
         component: withAuth(UserSettings),
         title: 'User Settings'
+      },
+      {
+        path: '/restricted',
+        component: withAuth(Restricted),
+        title: 'Secret'
       }
     ];
 
@@ -87,6 +93,10 @@ export default class MainRouter extends Component {
               {
                 key: 'Secret',
                 path: '/secret'
+              },
+              {
+                key: 'Restricted',
+                path: '/restricted'
               },
               {
                 key: 'Login',

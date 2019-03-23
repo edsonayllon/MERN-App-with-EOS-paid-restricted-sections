@@ -7,34 +7,10 @@ import {
 import { Button } from '../components';
 import { Link } from '../navigation';
 
-export default class Secret extends Component {
+export default class Protected extends Component {
   state = {
     message: 'Loading..',
     loading: false
-  }
-
-  logout = async () => {
-    try {
-      this.setState({ loading: true });
-      const success = await this.removeItemValue("JWT_TOKEN");
-      if (success) {
-        this.setState({loading: false});
-        this.props.history.push('/login');
-      }
-    } catch (err) {
-      this.setState({loading: false});
-      console.log(err);
-    }
-  }
-
-  async removeItemValue(key) {
-    try {
-      await AsyncStorage.removeItem(key);
-      return true;
-    }
-    catch(exception) {
-      return false;
-    }
   }
 
   async componentDidMount() {

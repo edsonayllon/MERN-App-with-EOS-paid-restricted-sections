@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 const argon2 = require('argon2');
 const User = require('../models/user.model');
+const passport = require('passport');
 
 module.exports.generatePasswordResetToken = async (email) => {
   try {
@@ -129,6 +130,10 @@ module.exports.verifyEmailAddress = async (token, email) => {
   }
 };
 
-module.exports.checkPremium = async (req, res, next) => {
-  
+module.exports.checkRestricted = function (req, res, next) {
+  passport.authenticate('jwt', { session : false }, async (err, payload, next) => {
+    req.payload = payload;
+    console.log(req.payload);
+  });
+  console.log(req);
 }
