@@ -20,6 +20,7 @@ const verifyEmailRouter = require('./routes/auth/verifyEmail.route');
 const indexRouter = require('./routes/index.route');
 const homeRouter = require('./routes/home.route');
 const secretRouter = require('./routes/secret.route');
+const restrictedRouter = require('./routes/restricted.route');
 
 // user settings
 const changePasswordRouter = require('./routes/changePassword.route');
@@ -77,7 +78,7 @@ app.use('/api/restricted',
     // req._id = payload._id;
     // userService.checkRestricted
   }),
-  secretRouter
+  restrictedRouter
 );
 
 // user settings
