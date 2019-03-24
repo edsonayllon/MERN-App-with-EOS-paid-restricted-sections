@@ -32,7 +32,8 @@ Restricted sections uses MongoDB, Node.js, Express.js, React, and React-Native (
 - [x] Configure User settings to display if user has role free user of premium user
 - [ ] Add EOS payments option once logged in to unlock restricted premium content
   - [x] Add activation page
-  - [ ] Link eosjs and scatter wallet
+  - [x] Link eosjs and scatter wallet
+  - [ ] Run a transaction to a company account
 - [ ] Push transaction to server, have server update user role to premium if matching transaction found on the EOS blockchain `eosio.token` contract, unlocking premium restricted section
 
 ## 3 | Getting Started
@@ -70,6 +71,18 @@ Inside `./backend/variables.env`.
 MAIL_USER = "your email"
 MAIL_PASS = "your email password"
 APP_NAME = "your app name or company name"
+```
+
+3. In `.frontend`
+
+This uses a local testnet using a local `eosio.token` smart contract. Instructions found in the EOS Dev Portal, getting started page.
+
+Add a .env file in the frontend root. Add the chain id found in your nodeos info.
+
+Found at http://localhost:8888/v1/chain/get_info
+
+```
+REACT_APP_CHAIN_ID=<your local chain ID>
 ```
 
 ### 3.2 Running

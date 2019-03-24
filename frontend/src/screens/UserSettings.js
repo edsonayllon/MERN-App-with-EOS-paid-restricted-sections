@@ -291,7 +291,7 @@ export default class UserSettings extends Component {
           <Link to='/activate-premium'>
             <Button
               isLoading = {this.state.loading}
-              title='Activate Restricted Content'
+              title='Unlock Restricted Content'
               />
           </Link>
         }
