@@ -23,7 +23,7 @@ const rpc = new JsonRpc(network.fullhost());
 
 export default class ActivatePremium extends Component {
   state = {
-
+    transacted: false
   }
 
   async retrieveItem(key) {
@@ -79,6 +79,11 @@ export default class ActivatePremium extends Component {
           console.log(trx);
 
           scatter.forgetIdentity();
+          if (trx) {
+            this.setState({
+              transacted: true
+            })
+          }
         } catch (e) {
           console.log('\nCaught exception: ' + e);
           if (e instanceof RpcError)
@@ -110,8 +115,21 @@ export default class ActivatePremium extends Component {
         </Link>
         <Text style={{fontWeight:'bolder', fontSize: 20, marginLeft: 5}}>Activate Premium Content</Text>
         </View>
-        <Text>Place marketing content here</Text>
-        <Button title='Pay with Scatter Wallet' onPress={this.scatterPay}/>
+        {this.state.transacted ?
+          <View>
+            <Text>Payment sent. Restricted section will be unlocked when the transaction is confirmed.</Text>
+            <Link to='/u/settings'>
+              <Button
+                title='Check account status'
+                />
+            </Link>
+          </View>
+        : <View>
+            <Text>Place marketing content here</Text>
+            <Button title='Pay with Scatter Wallet' onPress={this.scatterPay}/>
+          </View>
+        }
+
       </View>
     );
   }
