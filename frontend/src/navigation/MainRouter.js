@@ -13,7 +13,8 @@ import {
   ForgotPassword,
   ResetPassword,
   ConfirmEmail,
-  UserSettings
+  UserSettings,
+  ActivatePremium
 } from '../screens';
 import withAuth from '../components/withAuth';
 
@@ -65,6 +66,11 @@ export default class MainRouter extends Component {
         path: '/restricted',
         component: withAuth(Restricted),
         title: 'Secret'
+      },
+      {
+        path: '/activate-premium',
+        component: withAuth(ActivatePremium),
+        title: 'Activate Premium'
       }
     ];
 

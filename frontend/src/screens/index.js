@@ -7,3 +7,4 @@ export { default as ForgotPassword } from './ForgotPassword';
 export { default as ResetPassword } from './ResetPassword';
 export { default as ConfirmEmail } from './ConfirmEmail';
 export { default as UserSettings } from './UserSettings';
+export { default as ActivatePremium } from './ActivatePremium';

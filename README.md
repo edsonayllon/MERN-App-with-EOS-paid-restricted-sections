@@ -31,6 +31,8 @@ Restricted sections uses MongoDB, Node.js, Express.js, React, and React-Native (
 - [x] Add API for restricted section
 - [x] Configure User settings to display if user has role free user of premium user
 - [ ] Add EOS payments option once logged in to unlock restricted premium content
+  - [x] Add activation page
+  - [ ] Link eosjs and scatter wallet
 - [ ] Push transaction to server, have server update user role to premium if matching transaction found on the EOS blockchain `eosio.token` contract, unlocking premium restricted section
 
 ## 3 | Getting Started

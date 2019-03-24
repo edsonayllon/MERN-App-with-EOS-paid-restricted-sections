@@ -5,6 +5,7 @@ import {
   AsyncStorage
 } from 'react-native';
 import { Button, Input } from '../components';
+import { Link } from '../navigation';
 
 export default class UserSettings extends Component {
   state = {
@@ -24,7 +25,8 @@ export default class UserSettings extends Component {
     },
     loading: false,
     username: '',
-    role: ''
+    role: '',
+    restrictedAccess: false,
   }
 
   async removeItemValue(key) {
@@ -71,11 +73,13 @@ export default class UserSettings extends Component {
         }
         if (json.restrictedAccess) {
           this.setState({
-            role: 'premium'
+            role: 'premium',
+            restrictedAccess: true,
           })
         } else {
           this.setState({
-            role: 'free'
+            role: 'free',
+            restrictedAccess: false,
           })
         }
 
@@ -276,11 +280,21 @@ export default class UserSettings extends Component {
   }
 
   render() {
+
     return (
       <View>
         <Text style={{fontWeight:'bolder', fontSize: 20}}>User Settings</Text>
 
         <Text>Account type: {this.state.role}</Text>
+
+        { this.state.restrictedAccess ? null :
+          <Link to='/activate-premium'>
+            <Button
+              isLoading = {this.state.loading}
+              title='Activate Restricted Content'
+              />
+          </Link>
+        }
 
         <Text style={{fontWeight:'bold', fontSize: 16, marginTop: 10}}>Username</Text>
 
