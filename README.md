@@ -1,9 +1,9 @@
-# MERN Authentication
+# MERN App with EOS Paid Restricted Sections
 
 ## Table of Contents
 
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [MERN Authentication](#mern-authentication)
+- [MERN App with EOS Paid Restricted Sections](#mern-app-with-eos-paid-restricted-sections)
   - [Table of Contents](#table-of-contents)
   - [1 | Description](#1--description)
   - [2 | Roadmap](#2--roadmap)
