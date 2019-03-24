@@ -129,11 +129,3 @@ module.exports.verifyEmailAddress = async (token, email) => {
     };
   }
 };
-
-module.exports.checkRestricted = function (req, res, next) {
-  passport.authenticate('jwt', { session : false }, async (err, payload, next) => {
-    req.payload = payload;
-    console.log(req.payload);
-  });
-  console.log(req);
-}

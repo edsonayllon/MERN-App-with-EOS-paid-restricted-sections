@@ -27,9 +27,9 @@ export default class MainRouter extends Component {
         title: 'Home'
       },
       {
-        path: '/secret',
+        path: '/protected',
         component: withAuth(Protected),
-        title: 'Secret'
+        title: 'Protected'
       },
       {
         path: '/login',
@@ -91,8 +91,8 @@ export default class MainRouter extends Component {
 
               },
               {
-                key: 'Secret',
-                path: '/secret'
+                key: 'Protected',
+                path: '/protected'
               },
               {
                 key: 'Restricted',

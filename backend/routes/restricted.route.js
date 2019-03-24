@@ -7,7 +7,6 @@ const userService = require('../services/user.service');
 router.get('/', function(req, res, next) {
   res.send(`You have access to the restricted section`);
   console.log('SUCCESS: Connected to restricted route');
-  console.log(req._id);
 });
 
 module.exports = router;

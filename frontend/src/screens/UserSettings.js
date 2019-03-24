@@ -24,6 +24,7 @@ export default class UserSettings extends Component {
     },
     loading: false,
     username: '',
+    role: ''
   }
 
   async removeItemValue(key) {
@@ -51,7 +52,7 @@ export default class UserSettings extends Component {
     try {
       const jwt = await this.retrieveItem("JWT_TOKEN");
       const res = await fetch(
-        "http://localhost:4000/api/change-username", {
+        "http://localhost:4000/api/user-profile", {
         method: "GET",
         headers: {
           'Authorization': 'Bearer ' + jwt
@@ -59,9 +60,25 @@ export default class UserSettings extends Component {
       });
       if (res) {
         const json = await res.json()
-        this.setState({
-          username:  json.username
-        })
+        if (!(json.username)){
+          this.setState({
+            username:  'username not set'
+          })
+        } else {
+          this.setState({
+            username:  json.username
+          })
+        }
+        if (json.restrictedAccess) {
+          this.setState({
+            role: 'premium'
+          })
+        } else {
+          this.setState({
+            role: 'free'
+          })
+        }
+
       }
     } catch (err) {
       console.log('Promise is rejected with error: ' + err);
@@ -262,6 +279,8 @@ export default class UserSettings extends Component {
     return (
       <View>
         <Text style={{fontWeight:'bolder', fontSize: 20}}>User Settings</Text>
+
+        <Text>Account type: {this.state.role}</Text>
 
         <Text style={{fontWeight:'bold', fontSize: 16, marginTop: 10}}>Username</Text>
 
