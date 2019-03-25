@@ -18,7 +18,7 @@
 
 Modular authentication application made to isolate bugs with restricted paid section using EOS, and have one working authentication system to compare other apps implementing this protocol.
 
-Restricted sections uses MongoDB, Node.js, Express.js, React, and React-Native (MERN), as well as EOS and Scatter Wallet.
+Restricted sections uses MongoDB, Express.js, React, and React-Native, and Node.js (MERN), as well as EOS and Scatter Wallet.
 
 ![preview](restricted.gif)
 
@@ -76,17 +76,25 @@ MAIL_PASS = "your email password"
 APP_NAME = "your app name or company name"
 ```
 
-3. In `.frontend`
+3. In `./frontend`
 
-This uses a local testnet using a local `eosio.token` smart contract. Instructions found in the EOS Dev Portal, getting started page.
+This uses a local testnet using a local `eosio.token` smart contract. Instructions found in the EOS Dev Portal, getting started page, https://developers.eos.io/eosio-home/docs.
 
-Add a .env file in the frontend root. Add the chain id found in your nodeos info.
+Add a .env file in the `./frontend` root. Add the chain id found in your nodeos info.
 
 Found at http://localhost:8888/v1/chain/get_info
 
 ```
 REACT_APP_CHAIN_ID=<your local chain ID>
 ```
+
+**Scatter**
+
+This application requires Scatter Wallet to be installed. You can configure scatter to your local testnet in settings > network. To add accounts you created. You can then create a network with settings found in http://localhost:8888/v1/chain/get_info.
+
+You can then add accounts you create in cleos by inserting the private key for that account into Scatter and setting it to the localhost network you added.
+
+The accounts this app uses is an account named james for the receiving account.
 
 ### 3.2 Running
 
