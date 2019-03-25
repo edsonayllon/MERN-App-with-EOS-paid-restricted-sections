@@ -43,7 +43,7 @@ Restricted sections uses MongoDB, Express.js, React, and React-Native, and Node.
 
 ### 3.1 Installing
 
-1. Install dependencies in both `cd ./frontend` and `cd ./backend`
+#### 3.1.1 Install dependencies in both `cd ./frontend` and `cd ./backend`
 
 ```
 npm install || yarn
@@ -51,7 +51,7 @@ npm install || yarn
 
 Authentication requires MongoDB to be installed on your system. MongoDB can be installed with [HomeBrew on Mac](https://treehouse.github.io/installation-guides/mac/mongo-mac.html)
 
-2. In `./backend` create a new file `variables.env`.
+#### 3.1.2. In `./backend` create a new file `variables.env`.
 
 Add a secret key to `variables.env`. The secret key can be whatever you would like.
 This step is optional for this app if not running for production.
@@ -76,7 +76,7 @@ MAIL_PASS = "your email password"
 APP_NAME = "your app name or company name"
 ```
 
-3. In `./frontend`
+#### 3.1.3 In `./frontend`
 
 This uses a local testnet using a local `eosio.token` smart contract. Instructions found in the EOS Dev Portal, getting started page, https://developers.eos.io/eosio-home/docs.
 
@@ -88,7 +88,7 @@ Found at http://localhost:8888/v1/chain/get_info
 REACT_APP_CHAIN_ID=<your local chain ID>
 ```
 
-4. **Scatter Wallet**
+#### 3.1.4 Scatter Wallet
 
 This application requires Scatter Wallet to be installed, https://get-scatter.com/. You can configure scatter to your local testnet in settings > network. To add accounts you created. You can then create a network with settings found in http://localhost:8888/v1/chain/get_info.
 
@@ -100,7 +100,7 @@ The accounts this app uses is an account named james for the receiving account.
 
 You can run as a web app, mobile app, or desktop app.
 
-#### Running the Backend
+#### 3.2.1 Running the Backend
 
 You must run the backend first. The backend requires MongoD to be running first.
 
@@ -125,7 +125,7 @@ The back-end will be running in localhost:4000 with current settings.
 
 You can see your mongodb
 
-#### Running the Frontend
+#### 3.2.2 Running the Frontend
 
 The front-end will run in localhost:3000 with current settings.
 
