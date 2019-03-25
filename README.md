@@ -20,6 +20,7 @@ Modular authentication application made to isolate bugs with restricted paid sec
 
 Restricted sections uses MongoDB, Node.js, Express.js, React, and React-Native (MERN), as well as EOS and Scatter Wallet.
 
+[preview](restricted.gif)
 
 ## 2 | Roadmap
 
@@ -30,11 +31,13 @@ Restricted sections uses MongoDB, Node.js, Express.js, React, and React-Native (
 - [x] Add authentication
 - [x] Add API for restricted section
 - [x] Configure User settings to display if user has role free user of premium user
-- [ ] Add EOS payments option once logged in to unlock restricted premium content
+- [x] Add EOS payments option once logged in to unlock restricted premium content
   - [x] Add activation page
   - [x] Link eosjs and scatter wallet
-  - [ ] Run a transaction to a company account
-- [ ] Push transaction to server, have server update user role to premium if matching transaction found on the EOS blockchain `eosio.token` contract, unlocking premium restricted section
+  - [x] Run a transaction to a company account
+  - [x] Push transaction to server, have server update user role to premium if matching transaction found on the EOS blockchain `eosio.token` contract, unlocking premium restricted section
+  - [x] make a POST api route for receiving the EOS account and transaction
+  - [x] Conditional statement that updates user account unlocking restricted section access 
 
 ## 3 | Getting Started
 
