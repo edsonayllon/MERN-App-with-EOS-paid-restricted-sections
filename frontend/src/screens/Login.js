@@ -60,7 +60,7 @@ export default class Login extends Component {
             message: json.message,
             loginSuccess: true,
           });
-          this.props.history.push('/secret')
+          this.props.history.push('/protected')
           break;
         case 401:
           this.setState({

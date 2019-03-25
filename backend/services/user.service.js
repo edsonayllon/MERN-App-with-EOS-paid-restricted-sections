@@ -81,6 +81,24 @@ module.exports.changeUsername = async (id, username) => {
   }
 }
 
+module.exports.unlockRestricted = async (id) => {
+  try {
+    const user = await User.findOne({ '_id': id });
+    if (!user) {
+      throw new Error('error getting user')
+      return false;
+    } else {
+      user.restrictedAccess = true;
+      user.save()
+      return true;
+    }
+  } catch (err) {
+    console.log('error from catch')
+    throw new Error('error getting user')
+    return false;
+  }
+}
+
 module.exports.verifyEmailAddress = async (token, email) => {
   try {
     const user = await User.findOne({'local.email': email});

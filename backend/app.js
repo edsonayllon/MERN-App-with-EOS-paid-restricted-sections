@@ -26,6 +26,7 @@ const restrictedRouter = require('./routes/restricted.route');
 const changePasswordRouter = require('./routes/changePassword.route');
 const changeUsernameRouter = require('./routes/changeUsername.route');
 const userProfileRouter = require('./routes/userProfile.route');
+const eosConfirmRouter = require('./routes/eosConfirm.route');
 
 const app = express();
 
@@ -74,9 +75,10 @@ app.use('/api/secret', userMid.jwt, secretRouter);
 app.use('/api/restricted', userMid.checkPremium, restrictedRouter);
 
 // user settings
-app.use('/api/change-password', userMid.jwt,  changePasswordRouter);
-app.use('/api/change-username', userMid.jwt,  changeUsernameRouter);
-app.use('/api/user-profile', userMid.jwt,  userProfileRouter);
+app.use('/api/change-password', userMid.jwt, changePasswordRouter);
+app.use('/api/change-username', userMid.jwt, changeUsernameRouter);
+app.use('/api/user-profile', userMid.jwt, userProfileRouter);
+app.use('/api/eos-confirm', userMid.jwt, eosConfirmRouter);
 
 // auth routs
 app.use('/auth/register', registerRouter);

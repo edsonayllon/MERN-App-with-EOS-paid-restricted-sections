@@ -37,10 +37,6 @@ export default class ActivatePremium extends Component {
     return
   }
 
-  async componentDidMount() {
-
-  }
-
   scatterPay = async () => {
     console.log(network)
     ScatterJS.plugins( new ScatterEOS() );
@@ -68,7 +64,7 @@ export default class ActivatePremium extends Component {
               data: {
                 from: account.name,
                 to: 'james',
-                quantity: '3.0000 EOS',
+                quantity: '1.0000 EOS',
                 memo: `from ${account.name}`,
               },
             }]
@@ -80,9 +76,10 @@ export default class ActivatePremium extends Component {
 
           scatter.forgetIdentity();
           if (trx) {
-            this.setState({
+            const res = await this.postTransaction(account, trx)
+            if (res) this.setState({
               transacted: true
-            })
+            });
           }
         } catch (e) {
           console.log('\nCaught exception: ' + e);
@@ -97,7 +94,28 @@ export default class ActivatePremium extends Component {
   }
 
   postTransaction = async (account, trx) => {
-
+    try {
+      const jwt = await this.retrieveItem("JWT_TOKEN");
+      const res = await fetch('http://localhost:4000/api/eos-confirm', {
+        method: 'POST',
+        body: JSON.stringify({
+          account: account,
+          trx: trx.processed
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          'Authorization': 'Bearer ' + jwt
+        }
+      });
+      return res;
+    } catch (err) {
+      console.error(err);
+      this.setState({
+        message: 'Error connecting to server, check internet connection',
+        loginSuccess: false
+      });
+    }
   }
 
   render() {
@@ -115,18 +133,19 @@ export default class ActivatePremium extends Component {
         </Link>
         <Text style={{fontWeight:'bolder', fontSize: 20, marginLeft: 5}}>Activate Premium Content</Text>
         </View>
-        {this.state.transacted ?
+        {!(this.state.transacted) ?
           <View>
+            <Text>Place marketing content here</Text>
+            <Text>Cost is 1 EOS</Text>
+            <Button title='Pay with Scatter Wallet' onPress={this.scatterPay}/>
+          </View>
+        : <View>
             <Text>Payment sent. Restricted section will be unlocked when the transaction is confirmed.</Text>
             <Link to='/u/settings'>
               <Button
                 title='Check account status'
                 />
             </Link>
-          </View>
-        : <View>
-            <Text>Place marketing content here</Text>
-            <Button title='Pay with Scatter Wallet' onPress={this.scatterPay}/>
           </View>
         }
 

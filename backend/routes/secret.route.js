@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
-const User = require('../models/user.model');
 
 router.get('/', function(req, res, next) {
   res.send(
