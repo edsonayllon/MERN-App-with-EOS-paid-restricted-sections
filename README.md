@@ -2,17 +2,24 @@
 
 ## Table of Contents
 
-<!-- TOC START min:1 max:3 link:true update:true -->
-- [MERN App with EOS Paid Restricted Sections](#mern-app-with-eos-paid-restricted-sections)
-  - [Table of Contents](#table-of-contents)
-  - [1 | Description](#1--description)
-  - [2 | Roadmap](#2--roadmap)
-    - [2.1 Minimal Viable Product (MVP)](#21-minimal-viable-product-mvp)
-  - [3 | Getting Started](#3--getting-started)
-    - [3.1 Installing](#31-installing)
-    - [3.2 Running](#32-running)
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-<!-- TOC END -->
+- [MERN App with EOS Paid Restricted Sections](#mern-app-with-eos-paid-restricted-sections)
+	- [Table of Contents](#table-of-contents)
+	- [1 | Description](#1-description)
+	- [2 | Roadmap](#2-roadmap)
+		- [2.1 Minimal Viable Product (MVP)](#21-minimal-viable-product-mvp)
+	- [3 | Getting Started](#3-getting-started)
+		- [3.1 Installing](#31-installing)
+			- [3.1.1 Install dependencies in both `cd ./frontend` and `cd ./backend`](#311-install-dependencies-in-both-cd-frontend-and-cd-backend)
+			- [3.1.2. In `./backend` create a new file `variables.env`.](#312-in-backend-create-a-new-file-variablesenv)
+			- [3.1.3 In `./frontend`](#313-in-frontend)
+			- [3.1.4 Scatter Wallet](#314-scatter-wallet)
+		- [3.2 Running](#32-running)
+			- [3.2.1 Running the Backend](#321-running-the-backend)
+			- [3.2.2 Running the Frontend](#322-running-the-frontend)
+
+<!-- /TOC -->
 
 ## 1 | Description
 
