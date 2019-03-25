@@ -80,7 +80,7 @@ APP_NAME = "your app name or company name"
 
 This uses a local testnet using a local `eosio.token` smart contract. Instructions found in the EOS Dev Portal, getting started page, https://developers.eos.io/eosio-home/docs.
 
-Add a .env file in the `./frontend` root. Add the chain id found in your nodeos info.
+Add a `.env` file in the `./frontend` root. Add the chain id found in your nodeos info.
 
 Found at http://localhost:8888/v1/chain/get_info
 
@@ -88,7 +88,7 @@ Found at http://localhost:8888/v1/chain/get_info
 REACT_APP_CHAIN_ID=<your local chain ID>
 ```
 
-**Scatter**
+4. **Scatter Wallet**
 
 This application requires Scatter Wallet to be installed, https://get-scatter.com/. You can configure scatter to your local testnet in settings > network. To add accounts you created. You can then create a network with settings found in http://localhost:8888/v1/chain/get_info.
 
