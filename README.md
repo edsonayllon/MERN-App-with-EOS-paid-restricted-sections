@@ -42,8 +42,8 @@ Restricted sections uses MongoDB, Express.js, React, and React-Native, and Node.
   - [x] Link eosjs and scatter wallet
   - [x] Run a transaction to a company account
   - [x] Push transaction to server, have server update user role to premium if matching transaction found on the EOS blockchain `eosio.token` contract, unlocking premium restricted section
-  - [x] make a POST api route for receiving the EOS account and transaction
-  - [x] Conditional statement that updates user account unlocking restricted section access
+    - [x] make a POST api route for receiving the EOS account and transaction
+    - [x] Conditional statement that updates user account unlocking restricted section access
 
 ## 3 | Getting Started
 
