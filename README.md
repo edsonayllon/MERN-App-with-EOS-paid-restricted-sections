@@ -90,7 +90,7 @@ REACT_APP_CHAIN_ID=<your local chain ID>
 
 **Scatter**
 
-This application requires Scatter Wallet to be installed. You can configure scatter to your local testnet in settings > network. To add accounts you created. You can then create a network with settings found in http://localhost:8888/v1/chain/get_info.
+This application requires Scatter Wallet to be installed, https://get-scatter.com/. You can configure scatter to your local testnet in settings > network. To add accounts you created. You can then create a network with settings found in http://localhost:8888/v1/chain/get_info.
 
 You can then add accounts you create in cleos by inserting the private key for that account into Scatter and setting it to the localhost network you added.
 
