@@ -20,7 +20,7 @@ Modular authentication application made to isolate bugs with restricted paid sec
 
 Restricted sections uses MongoDB, Node.js, Express.js, React, and React-Native (MERN), as well as EOS and Scatter Wallet.
 
-[](restricted.gif)
+![preview](restricted.gif)
 
 ## 2 | Roadmap
 
