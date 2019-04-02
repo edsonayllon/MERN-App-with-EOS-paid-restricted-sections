@@ -32,7 +32,7 @@ Restricted sections uses MongoDB, Express.js, React, and React-Native, and Node.
 
 ### 2.1 Minimal Viable Product (MVP)
 
-**Status:** In progress
+**Status:** _Complete_
 
 - [x] Add authentication
 - [x] Add API for restricted section
