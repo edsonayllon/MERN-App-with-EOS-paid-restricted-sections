@@ -21,10 +21,9 @@ twitter: https://twitter.com/relativeread
 
 # MERN App with EOS Paid Restricted Sections
 
-## Table of Contents
+## Contents
 
 
-- [Table of Contents](#table-of-contents)
 - [1 | Description](#1--description)
 - [2 | Roadmap](#2--roadmap)
 	- [2.1 Minimal Viable Product (MVP)](#21-minimal-viable-product-mvp)
