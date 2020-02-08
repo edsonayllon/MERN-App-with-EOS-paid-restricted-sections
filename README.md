@@ -1,14 +1,34 @@
+---
+author: Edson Ayllon
+category: functionality
+tags:
+- paywall
+- cryptocurrency
+- smart contract
+- eosio
+- node
+- express
+- restricted sections
+- user accounts
+- authentication
+- email
+
+status: complete
+twitter: https://twitter.com/relativeread
+---
+
+## Modular 4-2019
+
 # MERN App with EOS Paid Restricted Sections
 
 ## Table of Contents
 
-<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Table of Contents](#table-of-contents)
-- [1 | Description](#1-description)
-- [2 | Roadmap](#2-roadmap)
+- [1 | Description](#1--description)
+- [2 | Roadmap](#2--roadmap)
 	- [2.1 Minimal Viable Product (MVP)](#21-minimal-viable-product-mvp)
-- [3 | Getting Started](#3-getting-started)
+- [3 | Getting Started](#3--getting-started)
 	- [3.1 Installing](#31-installing)
 		- [3.1.1 Install dependencies in both `cd ./frontend` and `cd ./backend`](#311-install-dependencies-in-both-cd-frontend-and-cd-backend)
 		- [3.1.2. In `./backend` create a new file `variables.env`.](#312-in-backend-create-a-new-file-variablesenv)
@@ -18,7 +38,6 @@
 		- [3.2.1 Running the Backend](#321-running-the-backend)
 		- [3.2.2 Running the Frontend](#322-running-the-frontend)
 
-<!-- /TOC -->
 
 ## 1 | Description
 
