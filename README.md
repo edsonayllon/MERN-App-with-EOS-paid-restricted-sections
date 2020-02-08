@@ -21,6 +21,8 @@ twitter: https://twitter.com/relativeread
 
 # MERN App with EOS Paid Restricted Sections
 
+Modular authentication application made to isolate bugs with restricted paid section using EOS, and have one working authentication system to compare other apps implementing this protocol.
+
 ## Contents
 
 
