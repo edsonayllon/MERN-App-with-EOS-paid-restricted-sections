@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "eosjs": "^20.0.0-beta3",
-    "expo": "^30.0.1",
+    "expo": "^46.0.16",
     "react": "^16.6.0",
     "react-art": "^16.6.0",
     "react-dom": "^16.6.0",
